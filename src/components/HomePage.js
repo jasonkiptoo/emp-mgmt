@@ -12,7 +12,7 @@ function HomePage() {
   const [employee, setEmployee] = useState([]);
 
   const handleAdd = (employeeData) => {
-    fetch("https://emp-db.herokuapp.com/users", {
+    fetch("http://localhost:3000/users", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(employeeData),
@@ -20,7 +20,7 @@ function HomePage() {
   };
 
   function userList() {
-    fetch("https://emp-db.herokuapp.com/users")
+    fetch("http://localhost:3000/users")
       .then((res) => res.json())
       .then((data) => setEmployee(data));
   }
