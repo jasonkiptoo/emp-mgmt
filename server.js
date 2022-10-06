@@ -5,7 +5,7 @@ const middlewares = jsonServer.defaults({
   static: "./build",
 });
 
-const port = process.env.PORT || 3000; // <== You can change the port
+const port = process.env.PORT || 4000; // <== You can change the port
 
 server.use(middlewares);
 server.use(
