@@ -20,7 +20,7 @@ function HomePage() {
   };
 
   function userList() {
-    fetch("http://localhost:5000/users")
+    fetch("https://emp-db.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setEmployee(data));
   }
@@ -29,7 +29,7 @@ function HomePage() {
   }, []);
   ///code to delete an employee
   const handleDelete = async (deletedEmployee) => {
-    fetch(`http://localhost:5000/users/${deletedEmployee}`, {
+    fetch(`https://emp-db.herokuapp.com/users/${deletedEmployee}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
