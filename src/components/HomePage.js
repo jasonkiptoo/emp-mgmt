@@ -27,6 +27,19 @@ function HomePage() {
   useEffect(() => {
     userList();
   }, []);
+  ///code to delete an employee
+  const handleDelete = async (deletedEmployee) => {
+    fetch(`https://emp-db.herokuapp.com/users/${deletedEmployee}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json)
+      .then(() => {
+        const deletedEmployeelist = employee.filter((emp) => {
+          return emp.id !== deletedEmployee;
+        });
+        setEmployee(deletedEmployeelist)
+      });
+  };
   return (
     <div>
       <NavBar />
@@ -40,7 +53,7 @@ function HomePage() {
         <Route
           exact
           path="/employeelist"
-          element={<EmployeeList userList={employee} />}
+          element={<EmployeeList userList={employee} onDelete={handleDelete} />}
         />
         <Route exact path="/salarypayments" element={<SalaryPays />} />
         <Route exact path="/pendingsalaries" element={<PendingSalaries />} />
