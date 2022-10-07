@@ -12,8 +12,8 @@ function SalaryPays() {
             addEmployee(event);
           }}
         >
-          <div className="form-row">
-            <div className="form-group col-md-6">
+          <div className="form-group">
+            <div className="form-group col-md-10">
               <h2>Enter Employee Payment Details</h2>
               <label htmlFor="inputEmail4">Select Employee From List</label>
               <div class="dropdown">

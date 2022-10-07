@@ -15,11 +15,28 @@
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background-color: yellowgreen;
+  height: auto;
+  background-color: #4ebce5;
+}
+.navbar-button{
+  height: 10px;
+  background-color: #4ebce5;
+  border: #4ebce5;
+  padding: auto;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 .form-row {
-  margin-left: 30%;
+  margin-left: 10%;
+}
+.form-group{
+  margin-left: 20%;
+}
+.form-group button{
+  margin-left: 20%;
+  margin-top: 5%;
 }
 .form-row button {
   margin-top: 5%;
