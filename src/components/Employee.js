@@ -9,7 +9,7 @@ function Employee({ employee ,onDelete}) {
   return (
     <tr key={id}>
       <td></td>
-      <td>{name}</td>
+      <td name={name}>{name}</td>
       <td>{email}</td>
       <td>{birthDate}</td>
       <td>{dept}</td>

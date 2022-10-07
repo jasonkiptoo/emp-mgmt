@@ -9,7 +9,13 @@
 .table-striped td:first-child:before {
   counter-increment: serial-number; /* Increment the serial number counter */
   content: counter(serial-number); /* Display the counter */
+  
 }
+.table-striped td{
+border: 1px solid black;
+
+}
+
 .nav {
   display: flex;
   align-items: center;

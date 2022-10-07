@@ -13,7 +13,6 @@ function EmployeeList({ userList, onDelete }) {
   return (
     <div className="table-design">
       <table class="table table-striped">
-        <tbody>
           <tr>
             <th>
               <h3 className="ui center aligned header">ID</h3>
@@ -40,6 +39,8 @@ function EmployeeList({ userList, onDelete }) {
               <h3 className="ui center aligned header">Action</h3>
             </th>
           </tr>
+        <tbody>
+
           {employeeList}
         </tbody>
       </table>

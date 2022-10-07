@@ -1,9 +1,21 @@
 import React from "react";
+import Employee from "./Employee";
 
-function SalaryPays({ employee }) {
-  // const empName = employee.map((empname) => {
-  //   console.log(empname.name);
-  // });
+function SalaryPays({ employee, onDelete }) {
+  const empName = employee.map((emp,index) => (
+    <tr key={index}>
+      {/* <td>{emp.id}</td> */}
+      <td></td>
+      <td>{emp.name}</td>
+      <td>{emp.email}</td>
+      <td>{emp.dept}</td>
+      <td>{emp.empSalary}</td>
+      <td></td>
+      <td>
+        <button className="btn btn-danger">Pending</button>
+      </td>
+    </tr>
+  ));
   const getFieldValue = () => {};
   const addEmployee = () => {};
   return (
@@ -12,15 +24,16 @@ function SalaryPays({ employee }) {
         <table class="table table-striped">
           <thead class="thead-dark">
             <tr>
+              <th>#</th>
               <th>Name</th>
               <th>Email</th>
               <th>Dept</th>
               <th>Basic Salary</th>
               <th>Account N.o</th>
-              <th>Action</th>
+                <th>Status</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>{empName}</tbody>
         </table>
       </div>
 
@@ -34,7 +47,7 @@ function SalaryPays({ employee }) {
           >
             <div class="form-group">
               <div class="dropdown">
-              <label htmlFor="inputEmail4">Name</label>
+                <label htmlFor="inputEmail4">Name</label>
 
                 <select
                   type="Number"
