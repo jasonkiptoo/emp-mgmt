@@ -20,7 +20,7 @@ function HomePage() {
   };
 
   function userList() {
-    fetch("https://emp-db.herokuapp.com/users")
+    fetch("http://localhost:5000/users")
       .then((res) => res.json())
       .then((data) => setEmployee(data));
   }
@@ -29,15 +29,15 @@ function HomePage() {
   }, []);
   ///code to delete an employee
   const handleDelete = async (deletedEmployee) => {
-    fetch(`https://emp-db.herokuapp.com/users/${deletedEmployee}`, {
+    fetch(`http://localhost:5000/users/${deletedEmployee}`, {
       method: "DELETE",
     })
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then(() => {
-        const deletedEmployeelist = employee.filter((emp) => {
+        const updatedList = employee.filter((emp) => {
           return emp.id !== deletedEmployee;
         });
-        setEmployee(deletedEmployeelist)
+        setEmployee(updatedList);
       });
   };
   return (

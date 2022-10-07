@@ -1,9 +1,14 @@
 import React from "react";
 import Employee from "./Employee";
 
-function EmployeeList({ userList }) {
+function EmployeeList({ userList, onDelete }) {
   const employeeList = userList.map((employee) => (
-    <Employee key={employee.id} employee={employee} image={employee.image} />
+    <Employee
+      key={employee.id}
+      employee={employee}
+      image={employee.image}
+      onDelete={onDelete}
+    />
   ));
   return (
     <div className="table-design">
