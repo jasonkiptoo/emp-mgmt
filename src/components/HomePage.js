@@ -31,7 +31,7 @@ function HomePage() {
     <div>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Home empl={employee} />} />
+        {/* <Route exact path="/" element={<Home empl={employee} />} /> */}
         <Route
           exact
           path="/addnewemployee"
