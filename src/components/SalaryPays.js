@@ -1,22 +1,41 @@
 import React from "react";
 
-function SalaryPays() {
+function SalaryPays({ employee }) {
+  // const empName = employee.map((empname) => {
+  //   console.log(empname.name);
+  // });
   const getFieldValue = () => {};
   const addEmployee = () => {};
   return (
-    <span class="border">
-      <div className="d-flex p-2">
-        <form
-          className="ui form"
-          onSubmit={(event) => {
-            addEmployee(event);
-          }}
-        >
-          <div className="form-group">
-            <div className="form-group col-md-10">
-              <h2>Enter Employee Payment Details</h2>
-              <label htmlFor="inputEmail4">Select Employee From List</label>
+    <div class="container">
+      <div class="salaryTable">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Dept</th>
+              <th>Basic Salary</th>
+              <th>Account N.o</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <span class="border">
+        <div className="d-flex p-2">
+          <form
+            className="ui form"
+            onSubmit={(event) => {
+              addEmployee(event);
+            }}
+          >
+            <div class="form-group">
               <div class="dropdown">
+              <label htmlFor="inputEmail4">Name</label>
+
                 <select
                   type="Number"
                   name="dept"
@@ -24,7 +43,12 @@ function SalaryPays() {
                   id="inputEmail4"
                   placeholder="employee n.o"
                   onChange={getFieldValue}
-                />
+                >
+                  <option value="Select Employee"> Select Employee⬇️ </option>
+                  {employee.map((empName) => (
+                    <option value={empName.name}>{empName.name}</option>
+                  ))}
+                </select>
                 <label htmlFor="inputEmail4">Email</label>
                 <input
                   type="text"
@@ -40,7 +64,7 @@ function SalaryPays() {
                   name="birthDate"
                   className="form-control"
                   id="inputEmail4"
-                  placeholder="email@email.com"
+                  placeholder="Date"
                   onChange={getFieldValue}
                 />
                 <label htmlFor="inputEmail4">Employee Number</label>
@@ -67,10 +91,10 @@ function SalaryPays() {
                 </button>
               </div>
             </div>
-          </div>
-        </form>
-      </div>
-    </span>
+          </form>
+        </div>
+      </span>
+    </div>
   );
 }
 export default SalaryPays;

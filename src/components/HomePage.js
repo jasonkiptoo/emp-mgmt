@@ -55,7 +55,7 @@ function HomePage() {
           path="/employeelist"
           element={<EmployeeList userList={employee} onDelete={handleDelete} />}
         />
-        <Route exact path="/salarypayments" element={<SalaryPays />} />
+        <Route exact path="/salarypayments" element={<SalaryPays employee={employee} />} />
         <Route exact path="/pendingsalaries" element={<PendingSalaries />} />
       </Routes>
     </div>
