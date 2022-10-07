@@ -16,25 +16,24 @@
   justify-content: space-around;
   height: 8vh;
   height: auto;
-  background-color: #4ebce5;
+  background-color: yellowgreen;
 }
-.navbar-button{
+.navbar-button {
   height: 10px;
-  background-color: #4ebce5;
-  border: #4ebce5;
+  background-color: yellowgreen;
+  border: #02090c;
   padding: auto;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 .form-row {
   margin-left: 10%;
 }
-.form-group{
+.form-group {
   margin-left: 20%;
 }
-.form-group button{
+.form-group button {
   margin-left: 20%;
   margin-top: 5%;
 }
@@ -69,56 +68,24 @@ td {
   margin-left: auto;
 }
 .navbar-button:hover {
-  background-color: yellowgreen;
-}
-.navbar sticky-top bg-primary {
-  justify-content: space-between;
+  background-color: rgb(159, 230, 18);
 }
 
-.inforide {
-  box-shadow: 1px 2px 8px 0px #a78f8f;
-  background-color: rgb(236, 219, 219);
-  border-radius: 8px;
-  height: 125px;
-}
-.rideone {
-  background-color: #6cc785;
-  padding-top: 25px;
-  border-radius: 8px 0px 0px 8px;
-  text-align: center;
-  height: 125px;
-  margin-left: 15px;
-}
-
-.ridethree {
-  background-color: #4ebce5;
-  padding-top: 35px;
-  border-radius: 8px 0px 0px 8px;
-  text-align: center;
-  height: 125px;
-  margin-left: 15px;
-}
 
 .fontsty {
-  margin-right: -15px;
   margin-bottom: 1px;
-}
-
-.fontsty h2 {
-  color: #6e6e6e;
-  font-size: 35px;
-  margin-top: 15px;
-  text-align: right;
-  margin-right: 30px;
+  background-color: #4ebce5;
+  display: inline-block;
+  margin: 1%;
+  height: auto;
+  width: 10%;
+  border-radius: 50px 20px;
 }
 
 .fontsty h4 {
-  color: #6e6e6e;
+  color: #faf3f3;
   font-size: 25px;
   margin-top: 20px;
   text-align: right;
-  margin-right: 30px;
-}
-.col-lg-3 {
-  padding: 50px;
+  margin-right: 50px;
 }

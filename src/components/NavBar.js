@@ -31,7 +31,7 @@ function navBar() {
       </button>
       <button class="navbar-button">
         <Link to="pendingsalaries" style={linkStyles}>
-          Pending Payment
+          Approved Payment
         </Link>
       </button>
       <button class="navbar-button" space-x-0style={linkStyles}>
