@@ -1,8 +1,26 @@
-import React from "react";
+import { Toast } from "bootstrap";
+import React, { useState } from "react";
 import Employee from "./Employee";
 
 function SalaryPays({ employee, onDelete }) {
-  const empName = employee.map((emp,index) => (
+  const [state, setState] = useState([]);
+
+  const { name, email, dept, payDate, empNumber, accNumber } = state;
+
+  const handleApprove = (id) => {
+    console.log("clikk", id);
+    // const singleUser=employee.find((emp)=>emp.id==id)
+    // setState
+  };
+
+  const onSubmitApprove = (event) => {
+    event.preventDefault();
+    if (!email) {
+      window.alert("Fill out all fields");
+    }
+  };
+
+  const empName = employee.map((emp, index) => (
     <tr key={index}>
       {/* <td>{emp.id}</td> */}
       <td></td>
@@ -12,7 +30,14 @@ function SalaryPays({ employee, onDelete }) {
       <td>{emp.empSalary}</td>
       <td></td>
       <td>
-        <button className="btn btn-danger">Pending</button>
+        <button
+          className="btn btn-danger"
+          onClick={() => {
+            handleApprove(emp.id);
+          }}
+        >
+          Pending
+        </button>
       </td>
     </tr>
   ));
@@ -30,7 +55,7 @@ function SalaryPays({ employee, onDelete }) {
               <th>Dept</th>
               <th>Basic Salary</th>
               <th>Account N.o</th>
-                <th>Status</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>{empName}</tbody>
@@ -39,19 +64,13 @@ function SalaryPays({ employee, onDelete }) {
 
       <span class="border">
         <div className="d-flex p-2">
-          <form
-            className="ui form"
-            onSubmit={(event) => {
-              addEmployee(event);
-            }}
-          >
+          <form className="ui form" onSubmit={onSubmitApprove}>
             <div class="form-group">
               <div class="dropdown">
-                <label htmlFor="inputEmail4">Name</label>
-
+                <h4>Name</h4>
                 <select
                   type="Number"
-                  name="dept"
+                  name="name"
                   className="form-control"
                   id="inputEmail4"
                   placeholder="employee n.o"
@@ -62,7 +81,7 @@ function SalaryPays({ employee, onDelete }) {
                     <option value={empName.name}>{empName.name}</option>
                   ))}
                 </select>
-                <label htmlFor="inputEmail4">Email</label>
+                <h4>Email</h4>
                 <input
                   type="text"
                   name="email"
@@ -71,10 +90,10 @@ function SalaryPays({ employee, onDelete }) {
                   placeholder="email@email.com"
                   onChange={getFieldValue}
                 />
-                <label htmlFor="inputEmail4">Date of Payment</label>
+                <h4>Date</h4>
                 <input
                   type="date"
-                  name="birthDate"
+                  name="payDate"
                   className="form-control"
                   id="inputEmail4"
                   placeholder="Date"
@@ -92,7 +111,7 @@ function SalaryPays({ employee, onDelete }) {
                 <label htmlFor="inputEmail4">Account N.o</label>
                 <input
                   type="Number"
-                  name="empNumber"
+                  name="accNumber"
                   className="form-control"
                   id="inputEmail4"
                   placeholder="acc n.o"

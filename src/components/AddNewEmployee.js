@@ -7,7 +7,9 @@ function AddNewEmployee({ onSubmit, addEmployee }) {
     setEmp({ ...emp, [event.target.name]: event.target.value });
   }
   function addEmployee(event) {
+    event.preventDefault();
     onSubmit(emp);
+    setEmp({name:"",email:"",birthDate:"",empNumber:"",dept:"",empTerms:"",empSalary:""})
   }
   return (
     <div>
