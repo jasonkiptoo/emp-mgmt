@@ -1,5 +1,5 @@
 ### Description
-This app allows users to maintain employees records, the user xan add an employee, delete or update the employee's record depending on the need. The user can further approve employee salary payment by selecting the specific employee and updating their employee details
+This app allows users to maintain employees records, the user xan add an employee, delete or update the employee's record depending on the need. The user can further approve employee salary payment by selecting the specific employee and updating their employee details. This is a work in progress that can be deployed and ready to be used by any employer who wishes to automate their systems.
 
 
 
